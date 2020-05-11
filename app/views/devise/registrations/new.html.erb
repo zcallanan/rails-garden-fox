@@ -31,7 +31,9 @@
                 label: 'Birth Date',
                 input_html: {
                   data: {
-                    controller: 'datepicker'
+                    controller: 'datepicker',
+                    default_date: '01-01-1980',
+                    max_date: Time.zone.today - 6570
                   }
                 }
       %>
