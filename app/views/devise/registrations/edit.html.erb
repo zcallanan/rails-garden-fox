@@ -34,20 +34,12 @@
                 hint: "leave it blank if you don't want to change it",
                 required: false,
                 input_html: { autocomplete: "phone_number" } %>
-    <%#= f.input :birth_date,
-                start_year: Date.today.year - 90,
-                end_year: Date.today.year - 12,
-                selected: f.object.birth_date.year || 1980,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "birth_date" } %>
     <%= f.input :birth_date,
                 as: :string,
                 label: 'Birth Date',
                 placeholder: '',
                 hint: "leave it blank if you don't want to change it",
                 input_html: {
-                  # value: f.object.try(:strftime,"%d/%m/%Y") || 01/01/1980,
                   data: {
                     controller: 'datepicker'
                   }
