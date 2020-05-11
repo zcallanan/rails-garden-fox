@@ -26,8 +26,17 @@
                 required: true,
                 input_html: { autocomplete: "phone_number" } %>
     <%= f.input :birth_date,
-                required: true,
-                input_html: { autocomplete: "birth_date" } %>
+                as: :string,
+                required:true,
+                label: 'Birth Date',
+                input_html: {
+                  data: {
+                    controller: 'datepicker'
+                  }
+                }
+      %>
+
+
   </div>
 
   <div class="form-actions">
