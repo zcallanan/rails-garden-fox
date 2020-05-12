@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_11_140041) do
+ActiveRecord::Schema.define(version: 2020_05_12_135638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.float "booking_price"
+    t.string "status", default: "requested"
+    t.bigint "user_id"
+    t.bigint "garden_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["garden_id"], name: "index_bookings_on_garden_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "gardens", force: :cascade do |t|
     t.text "description"
@@ -23,11 +36,12 @@ ActiveRecord::Schema.define(version: 2020_05_11_140041) do
     t.string "filter_categories"
     t.integer "size"
     t.integer "capacity"
-    t.string "type"
+    t.string "garden_type"
     t.boolean "availability"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["user_id"], name: "index_gardens_on_user_id"
   end
 
@@ -43,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_05_11_140041) do
     t.string "country_code"
     t.string "phone_number"
     t.date "birth_date"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
