@@ -1,1 +1,6 @@
-<%= @gardens %>
+<% @gardens.each do |garden| %>
+  <% if garden.availability %>
+    <%= render :partial => "garden_card", :object => garden %>
+  <% end %>
+<% end  %>
+

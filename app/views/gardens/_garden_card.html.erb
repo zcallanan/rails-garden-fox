@@ -1,0 +1,28 @@
+<div class="card-product">
+  <img src="https://media.architecturaldigest.com/photos/56f99e6b68aa959e79f3527f/master/w_1600%2Cc_limit/living-roofs-rooftop-gardens-book-02.jpg" />
+  <div class="card-product-infos">
+    <div class="row">
+      <div class="col">
+        <p><%= garden_card.garden_type %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2><%= garden_card.name %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p><%= garden_card.capacity %> guests</p>
+        <% array = garden_card.filter_categories.split(", ")  %>
+        <% array.each_with_index do |filter, index| %>
+          <% if array.last == filter %>
+            <p><%= filter %></p>
+          <% else %>
+            <p><%= filter %> • </p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
