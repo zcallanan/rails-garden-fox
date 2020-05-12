@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-  skip_before_action :authenticate_user!, only: %i[home index show]
+  skip_before_action :authenticate_user!, only: %i[home]
+
+  after_action :verify_authorized, except: %i[index], unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: %i[index], unless: :skip_pundit?
+
+  include Pundit
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
@@ -12,5 +17,11 @@ class ApplicationController < ActionController::Base
   end
 
   def home
+  end
+
+  private
+
+  def skip_pundit?
+    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
 end
