@@ -10,12 +10,13 @@ Garden.destroy_all
 
 15.times do
   User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    address: Faker::Address.street_address,
-    country_select: Faker::Address.country,
     email: Faker::Internet.email,
+    address: Faker::Address.street_address,
+    country_code: "Germany",
     phone_number: Faker::Business.credit_card_number,
-    birth_date: Faker::Date.birthday,
+    birth_date: "2020-05-12",
+    password: "Password"
     )
 end
+
+
