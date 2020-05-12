@@ -1,6 +1,8 @@
 <% @gardens.each do |garden| %>
   <% if garden.availability %>
-    <%= render :partial => "garden_card", :object => garden %>
+    <%= link_to garden_path(garden), class: "garden-link" do %>
+      <%= render :partial => "garden_card", :object => garden %>
+    <% end %>
   <% end %>
 <% end  %>
 
