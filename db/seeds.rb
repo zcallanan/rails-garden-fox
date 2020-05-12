@@ -44,3 +44,78 @@ garden = Garden.new(
   user_id: 1
   )
 garden.save
+
+garden = Garden.new(
+  name: "Sort of a garden",
+  description: "It's ok",
+  location: "Munich",
+  price: 500,
+  house_rules: "Stay off the grass",
+  filter_categories: "BBQ, Fireplace",
+  size: 50,
+  capacity: 8,
+  garden_type: "Garden",
+  availability: true,
+  user_id: 2
+  )
+garden.save
+
+garden = Garden.new(
+  name: "An okay garden",
+  description: "A modest garden",
+  location: "Munich",
+  price: 300,
+  house_rules: "Keep noise down.",
+  filter_categories: "TV, Fireplace, WiFi",
+  size: 100,
+  capacity: 10,
+  garden_type: "Rooftop",
+  availability: false,
+  user_id: 1
+  )
+garden.save
+
+garden = Garden.new(
+  name: "Awesome Garden",
+  description: "A beautiful garden",
+  location: "Munich",
+  price: 500,
+  house_rules: "No parties or pets. No fun!",
+  filter_categories: "BBQ, Fireplace",
+  size: 250,
+  capacity: 25,
+  garden_type: "Garden",
+  availability: true,
+  user_id: 2
+  )
+garden.save
+
+garden = Garden.new(
+  name: "An okay garden",
+  description: "A modest garden",
+  location: "Munich",
+  price: 300,
+  house_rules: "Keep noise down.",
+  filter_categories: "TV, Fireplace, WiFi",
+  size: 100,
+  capacity: 10,
+  garden_type: "Rooftop",
+  availability: true,
+  user_id: 1
+  )
+garden.save
+
+garden = Garden.new(
+  name: "Sort of a garden",
+  description: "It's ok",
+  location: "Munich",
+  price: 500,
+  house_rules: "Stay off the grass",
+  filter_categories: "BBQ, Fireplace",
+  size: 50,
+  capacity: 8,
+  garden_type: "Garden",
+  availability: true,
+  user_id: 2
+  )
+garden.save
