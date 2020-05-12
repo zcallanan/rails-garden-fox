@@ -1,1 +1,70 @@
 // Specific CSS for your home-page
+.top-gardens h1 {
+  color: darkslategrey;
+  text-align: center;
+  margin: 50px auto;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #F1F8F7;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.checked {
+  color: orange;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Testimonials
+
+.wrapper {
+  background: white;
+  text-align: center;
+  padding: 50px;
+  color: rgb(51, 51, 51)
+}
+
+.wrapper h1 {
+  margin-bottom: 32px;
+  color: darkslategrey;
+  font-weight: bold;
+}
+
+.wrapper p {
+  margin-bottom: 32px;
+}
+
+.testimonials {
+  display: flex;
+  background: white;
+}
+
+.testimonial {
+  background: white;
+  margin: 24px;
+}
+.testimonial h5 {
+  margin-bottom: 0px;
+}
+
+.fa-user-circle {
+  font-size: 45px;
+  color: rgb(77, 77, 77);
+  margin-right: 12px;
+}
+
+.test-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
