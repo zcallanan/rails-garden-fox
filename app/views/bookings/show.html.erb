@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="banner" style="" alt="">
+    <div class="images">
+      <h2> <%= link_to (images) IMAGE  "btn btn-primary" %></h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-8"></div>
+
+      <div class="garden">
+        <h1> <%= @garden_name, @garden_location %> </h1>
+        <ol>
+          <li> <%= @garden_size %> </li>
+          <li> <%= @garden_capacity %> </li>
+          <li> <%= @garden_filter_categories %> </li>
+          <li> <%= @garden_type %> </li>
+        </ol>
+      </div>
+
+      <div class="staus">
+        <h2> <%= @garden_availability %> </h2>
+      </div>
+
+      <div class="description">
+        <h3>description</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit</p>
+      </div>
+    </div>
+
+    <div class="house rules">
+      <h3>description</h3>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div class="user_id">
+      <h4><%= @garden_user %></h4>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <div class="assessment">
+        <h2>Select your travel dates so that we can show you the price</h2>
+      </div>
+      <div class="form">
+        <%= simple_form_for[] do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.input :guests %>
+        <%= f.submit "Booking dates", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
