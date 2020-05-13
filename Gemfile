@@ -35,6 +35,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'country_select', '~> 4.0'
 gem 'pundit'
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'

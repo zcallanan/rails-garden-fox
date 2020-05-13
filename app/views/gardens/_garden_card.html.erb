@@ -1,24 +1,24 @@
 <div class="card-product row">
 
-  <div class="inner-card col-6">
+  <div class="inner-card">
     <img src="https://media.architecturaldigest.com/photos/56f99e6b68aa959e79f3527f/master/w_1600%2Cc_limit/living-roofs-rooftop-gardens-book-02.jpg" />
     <div class="card-product-infos row justify-content-start align-items-center flex-grow-1">
       <div class="col">
         <div class="row">
           <div class="col" id="garden-type">
-            <p><%= garden_card.garden_type %></p>
+            <p><%= item.garden_type %></p>
           </div>
         </div>
         <div class="row">
           <div class="col" id="garden-name">
-            <h2><%= garden_card.name %></h2>
+            <h2><%= item.name %></h2>
           </div>
         </div>
         <div class="row">
           <div class="col" id="garden-details">
-            <p><%= garden_card.capacity %> guests • <%= garden_card.size %> m<sup>2</sup></p>
+            <p><%= item.capacity %> guests • <%= item.size %> m<sup>2</sup></p>
             <% string = "" %>
-            <% array = garden_card.filter_categories.split(", ")  %>
+            <% array = item.filter_categories.split(", ")  %>
             <% array.each_with_index do |filter, index| %>
               <% if array.last == filter %>
                 <% string += "#{filter}" %>
@@ -29,7 +29,7 @@
             <p><%= string %></p>
           </div>
           <div>
-            <h5><%= garden_card.price %>€ / per day</h5>
+            <h5><%= item.price %>€ / per day</h5>
           </div>
         </div>
       </div>
