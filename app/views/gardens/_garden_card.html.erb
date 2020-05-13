@@ -1,7 +1,7 @@
 <div class="card-product row flex-grow-1">
 
   <div class="inner-card">
-    <%= cl_image_tag("rooftop_garden.jpg", width: 600, height: 400, crop: :fill) %>
+    <%= cl_image_tag item.photo.key, height: 400, width: 600, crop: :fill %>
     <div class="card-product-infos row justify-content-start align-items-center flex-grow-1">
       <div class="col">
         <div class="row">
