@@ -1,39 +1,24 @@
+<div class="showpage-banner"></div>
 <div class="container">
-  <div class="banner" style="" alt="">
-    <div class="images">
-      <%= link_to "Images", "#", class:  "btn btn-primary" %>
-    </div>
-  </div>
-
   <div class="row">
-
-    <div class="main-container"></div>
-
-      <div class="garden">
-        <h1> <%= @garden.name %> <%= @garden.address %> </h1>
-        <ol class="">
-          <li> <%= @garden.size %> </li>
-          <li> <%= @garden.capacity %> </li>
-          <li> <%= @garden.filter_categories %> </li>
-          <li> <%= @garden.garden_type %> </li>
-        </ol>
-      </div>
-
-      <div class="description">
-        <h3>description</h3>
+    <div class="col-8">
+        <h1><strong> <%= @garden.name %> <%= @garden.address %> </strong></h1>
+        <div class="col">
+            <p> <%= @garden.size %> <%= @garden.capacity %> <%= @garden.garden_type %> </p>
+        </div>
+      <div class="col">
+        <h2>description</h2>
         <p> <%= @garden.description %> </p>
       </div>
-
-      <div class="house rules">
-        <h3>house rules</h3>
+      <div class="col">
+        <h2>house rules</h2>
         <p> <%= @garden.house_rules %> </p>
       </div>
-
-    <div class="book-form">
+    </div>
+    <div class="col-4">
       <div class="assessment">
         <h2>Select your travel dates so that we can show you the price</h2>
       </div>
-
       <%= simple_form_for([@garden, @booking]) do |f| %>
       <h3><span class="price">€<%= number_with_delimiter(@garden.price) %></span> per day</h3>
       <hr>
@@ -67,7 +52,7 @@
         %>
       </div>
       <%end%>
-     </div>
+      <div type="Book now!" class="btn btn-danger">Book now!</div>
     </div>
   </div>
 </div>
