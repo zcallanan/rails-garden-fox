@@ -9,7 +9,7 @@
     <div class="col-12 col-lg-8"></div>
 
       <div class="garden">
-        <h1> <%= @garden_name, @garden_location %> </h1>
+        <h1> <%= @garden.name, @garden.location %> </h1>
         <ol>
           <li> <%= @garden.size %> </li>
           <li> <%= @garden.capacity %> </li>
@@ -24,17 +24,13 @@
 
       <div class="description">
         <h3>description</h3>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+        <p> <%= garden.description %> </p>
       </div>
     </div>
 
     <div class="house rules">
-      <h3>description</h3>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+      <h3>house rules</h3>
+      <p> <%= garden.houes_rules %> </p>
     </div>
 
     <div class="user_id">
