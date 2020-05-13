@@ -74,7 +74,7 @@ class GardensController < ApplicationController
   end
 
   def garden_params
-    params.require(:garden).permit(params[:name, :description, :address, :price, :house_rules, :filter_categories, :size, :capacity, :garden_type, :availability, :host_id])
+    params.require(:garden).permit(params[:photo, :name, :description, :address, :price, :house_rules, :filter_categories, :size, :capacity, :garden_type, :availability, :host_id])
   end
 
   def set_booking

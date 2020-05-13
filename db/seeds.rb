@@ -12,110 +12,65 @@
 
 #   )
 
+require "open-uri"
+
+
 
 Garden.destroy_all
 
 garden = Garden.new(
-  name: "Awesome Garden",
-  description: "A beautiful garden",
-  address: "16 Villa Gaudelet, Paris",
+  name: "Alter Botanischer Garden",
+  description: "Old Botanical garden is located in Maxvorstadt, Munich, Bavaria, Germany.",
+  address: "Sophienstraße 7, 80333 München",
   price: 500,
-  house_rules: "No parties or pets. No fun!",
-  filter_categories: "BBQ, Fireplace",
-  size: 250,
-  capacity: 25,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees",
+  size: 1000,
+  capacity: 100,
   garden_type: "Garden",
   availability: true,
-  user_id: 2
+  user_id: 2,
   )
+image = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alter_Botanischer_Garten_Munich.jpg/2560px-Alter_Botanischer_Garten_Munich.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
 garden.save
 
 garden = Garden.new(
-  name: "An okay garden",
-  description: "A modest garden",
-  address: "Munich",
-  price: 300,
-  house_rules: "Keep noise down.",
-  filter_categories: "TV, Fireplace, WiFi",
-  size: 100,
-  capacity: 10,
-  garden_type: "Rooftop",
-  availability: true,
-  user_id: 1
-  )
-garden.save
-
-garden = Garden.new(
-  name: "Sort of a garden",
-  description: "It's ok",
-  address: "Munich",
+  name: "Hofgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 1, 80538 München",
   price: 500,
-  house_rules: "Stay off the grass",
-  filter_categories: "BBQ, Fireplace",
-  size: 50,
-  capacity: 8,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
   garden_type: "Garden",
   availability: true,
-  user_id: 2
+  user_id: 2,
   )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
 garden.save
 
 garden = Garden.new(
-  name: "An okay garden",
-  description: "A modest garden",
-  address: "Munich",
-  price: 300,
-  house_rules: "Keep noise down.",
-  filter_categories: "TV, Fireplace, WiFi",
-  size: 100,
-  capacity: 10,
-  garden_type: "Rooftop",
-  availability: false,
-  user_id: 1
-  )
-garden.save
-
-garden = Garden.new(
-  name: "Awesome Garden",
-  description: "A beautiful garden",
-  address: "Munich",
+  name: "Rosengarten Untergiesing",
+  description: "This serene, grassy park is known for its colorful rose gardens that bloom in June & July.",
+  address: "Sachsenstraße 2, 81543 München",
   price: 500,
-  house_rules: "No parties or pets. No fun!",
-  filter_categories: "BBQ, Fireplace",
-  size: 250,
-  capacity: 25,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees River",
+  size: 3000,
+  capacity: 150,
   garden_type: "Garden",
   availability: true,
-  user_id: 2
+  user_id: 2,
   )
-garden.save
+image = "https://www.kimapa.de/wp-content/uploads/2014/09/Rosengarten_11-1-620x413.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
-garden = Garden.new(
-  name: "An okay garden",
-  description: "A modest garden",
-  address: "Munich",
-  price: 300,
-  house_rules: "Keep noise down.",
-  filter_categories: "TV, Fireplace, WiFi",
-  size: 100,
-  capacity: 10,
-  garden_type: "Rooftop",
-  availability: true,
-  user_id: 1
-  )
-garden.save
-
-garden = Garden.new(
-  name: "Sort of a garden",
-  description: "It's ok",
-  address: "Munich",
-  price: 500,
-  house_rules: "Stay off the grass",
-  filter_categories: "BBQ, Fireplace",
-  size: 50,
-  capacity: 8,
-  garden_type: "Garden",
-  availability: true,
-  user_id: 2
-  )
 garden.save
