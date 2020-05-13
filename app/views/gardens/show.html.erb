@@ -1,27 +1,29 @@
-<div class="showpage-banner"></div>
+<div class="showpage-banner" ></div>
 <div class="container">
   <div class="row">
-    <div class="col-8">
-        <h1><strong> <%= @garden.name %> <%= @garden.address %> </strong></h1>
+    <div class="col-8 shadow p-3 mb-5 bg-white rounded p-5">
+      <h1><strong> <%= @garden.name %> <%= @garden.address %> </strong></h1>
         <div class="col">
-            <p> <%= @garden.size %> <%= @garden.capacity %> <%= @garden.garden_type %> </p>
+            <p> <%= @garden.size %> <strong>size</strong>  <%= @garden.capacity %>
+            <strong>capacity</strong> <%= @garden.garden_type %> <strong>type</strong> </p>
         </div>
       <div class="col">
-        <h2>description</h2>
-        <p> <%= @garden.description %> </p>
+        <h2>Description</h2>
+          <p> <%= @garden.description %> </p>
       </div>
       <div class="col">
-        <h2>house rules</h2>
-        <p> <%= @garden.house_rules %> </p>
+        <h2>House rules</h2>
+          <p> <%= @garden.house_rules %> </p>
       </div>
     </div>
-    <div class="col-4">
+
+    <div class="col-4 shadow p-3 mb-5 bg-white rounded p-5">
       <div class="assessment">
         <h2>Select your travel dates so that we can show you the price</h2>
       </div>
-      <%= simple_form_for([@garden, @booking]) do |f| %>
+        <%= simple_form_for([@garden, @booking]) do |f| %>
       <h3><span class="price">€<%= number_with_delimiter(@garden.price) %></span> per day</h3>
-      <hr>
+        <hr>
       <div class="form-row">
         <%= f.input :start_date,
           as: :string,
