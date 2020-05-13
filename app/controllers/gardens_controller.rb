@@ -17,7 +17,9 @@ class GardensController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+  end
 
   def new
     @garden = Garden.new
