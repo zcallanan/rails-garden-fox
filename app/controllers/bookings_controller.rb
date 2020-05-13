@@ -40,7 +40,6 @@ class BookingsController < ApplicationController
     # occurs in index
   end
 
-
   private
 
   def set_booking
@@ -54,5 +53,4 @@ class BookingsController < ApplicationController
   def set_garden
     @garden = Garden.find(params[:garden_id])
   end
-
 end

@@ -14,11 +14,21 @@
 
 
 Garden.destroy_all
+User.destroy_all
+
+user = User.create(
+  email: "gmail@gmail.com",
+  password: "password",
+  address: "Bogenstreet",
+  country_code: "de",
+  phone_number: "983749326",
+  birth_date: 20.years.ago
+)
 
 garden = Garden.new(
   name: "Awesome Garden",
   description: "A beautiful garden",
-  location: "Munich",
+  address: "16 Villa Gaudelet, Paris",
   price: 500,
   house_rules: "No parties or pets. No fun!",
   filter_categories: "BBQ, Fireplace",
@@ -26,14 +36,14 @@ garden = Garden.new(
   capacity: 25,
   garden_type: "Garden",
   availability: true,
-  user_id: 2
+  user: user
   )
 garden.save
 
 garden = Garden.new(
   name: "An okay garden",
   description: "A modest garden",
-  location: "Munich",
+  address: "Munich",
   price: 300,
   house_rules: "Keep noise down.",
   filter_categories: "TV, Fireplace, WiFi",
@@ -41,6 +51,81 @@ garden = Garden.new(
   capacity: 10,
   garden_type: "Rooftop",
   availability: true,
-  user_id: 1
+  user: user
+  )
+garden.save
+
+garden = Garden.new(
+  name: "Sort of a garden",
+  description: "It's ok",
+  address: "Munich",
+  price: 500,
+  house_rules: "Stay off the grass",
+  filter_categories: "BBQ, Fireplace",
+  size: 50,
+  capacity: 8,
+  garden_type: "Garden",
+  availability: true,
+  user: user
+  )
+garden.save
+
+garden = Garden.new(
+  name: "An okay garden",
+  description: "A modest garden",
+  address: "Munich",
+  price: 300,
+  house_rules: "Keep noise down.",
+  filter_categories: "TV, Fireplace, WiFi",
+  size: 100,
+  capacity: 10,
+  garden_type: "Rooftop",
+  availability: false,
+  user: user
+  )
+garden.save
+
+garden = Garden.new(
+  name: "Awesome Garden",
+  description: "A beautiful garden",
+  address: "Munich",
+  price: 500,
+  house_rules: "No parties or pets. No fun!",
+  filter_categories: "BBQ, Fireplace",
+  size: 250,
+  capacity: 25,
+  garden_type: "Garden",
+  availability: true,
+  user: user
+  )
+garden.save
+
+garden = Garden.new(
+  name: "An okay garden",
+  description: "A modest garden",
+  address: "Munich",
+  price: 300,
+  house_rules: "Keep noise down.",
+  filter_categories: "TV, Fireplace, WiFi",
+  size: 100,
+  capacity: 10,
+  garden_type: "Rooftop",
+  availability: true,
+  user: user
+  )
+garden.save
+
+garden = Garden.new(
+  name: "Sort of a garden",
+  description: "It's ok",
+  address: "Munich",
+  price: 500,
+  house_rules: "Stay off the grass",
+  filter_categories: "BBQ, Fireplace",
+  size: 50,
+  capacity: 8,
+  garden_type: "Garden",
+  availability: true,
+  user: user
   )
 garden.save

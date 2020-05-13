@@ -35,12 +35,17 @@
                 required: false,
                 input_html: { autocomplete: "phone_number" } %>
     <%= f.input :birth_date,
-                start_year: Date.today.year - 90,
-                end_year: Date.today.year - 12,
-                selected: f.object.birth_date.year || 1980,
+                as: :string,
+                label: 'Birth Date',
+                placeholder: '',
                 hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "birth_date" } %>
+                input_html: {
+                  data: {
+                    max_date: Time.zone.today - 6570,
+                    controller: 'datepicker'
+                  }
+                }
+      %>
   </div>
 
   <div class="form-actions">
