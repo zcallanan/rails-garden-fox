@@ -1,4 +1,4 @@
-<div class="card-product row">
+<div class="card-product row flex-grow-1">
 
   <div class="inner-card">
     <img src="https://media.architecturaldigest.com/photos/56f99e6b68aa959e79f3527f/master/w_1600%2Cc_limit/living-roofs-rooftop-gardens-book-02.jpg" />
@@ -15,8 +15,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col" id="garden-details">
-            <p><%= item.capacity %> guests • <%= item.size %> m<sup>2</sup></p>
+          <div class="col row justify-content-start" id="garden-details">
+            <div class="col-8">
+              <p><%= item.capacity %> guests • <%= item.size %> m<sup>2</sup></p>
             <% string = "" %>
             <% array = item.filter_categories.split(", ")  %>
             <% array.each_with_index do |filter, index| %>
@@ -27,9 +28,10 @@
               <% end %>
             <% end %>
             <p><%= string %></p>
+            </div>
+          <div class="col-4">
+            <h5 id="card-price"><%= item.price %>€ / per day</h5>
           </div>
-          <div>
-            <h5><%= item.price %>€ / per day</h5>
           </div>
         </div>
       </div>

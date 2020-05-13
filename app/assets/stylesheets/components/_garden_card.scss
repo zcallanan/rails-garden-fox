@@ -11,6 +11,7 @@
   border-top: 1px #EBEBEB solid;
   padding-bottom: 24px;
   padding-top: 24px;
+  flex-grow: 1;
 }
 
 .inner-card img {
@@ -18,10 +19,6 @@
   width: 300px;
   object-fit: cover;
 }
-
-// .card-product-infos {
-
-// }
 
 .card-product-infos h2 {
   font-size: 18px;
@@ -52,4 +49,8 @@
 
 #garden-name {
   padding-bottom: 12px;
+}
+
+#garden-price {
+  margin-right: -20px;
 }
