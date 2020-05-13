@@ -1,12 +1,9 @@
 class GardensController < ApplicationController
   before_action :set_garden, only: %i[show edit update destroy]
-  before_action :set_booking, only: :show
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
     @gardens = policy_scope(Garden.geocoded).order(updated_at: :desc)
-
-    #@flats = Flat.geocoded # returns flats with coordinates
 
     @markers = @gardens.map do |garden|
       {
@@ -77,7 +74,4 @@ class GardensController < ApplicationController
     params.require(:garden).permit(params[:photo, :name, :description, :address, :price, :house_rules, :filter_categories, :size, :capacity, :garden_type, :availability, :host_id])
   end
 
-  def set_booking
-    @booking = Booking.find(params[:garden_id])
-  end
 end
