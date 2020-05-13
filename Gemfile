@@ -37,6 +37,9 @@ gem 'country_select', '~> 4.0'
 gem 'pundit'
 gem 'geocoder'
 
+# image upload
+gem 'cloudinary', '~> 1.12.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
