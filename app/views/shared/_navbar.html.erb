@@ -1,4 +1,10 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top"
+    data-controller="scroll"
+    data-action="scroll@window->scroll#toggle"
+    data-scroll-class-name="navbar-shadow"
+    data-scroll-trigger-y="30"
+     >
+
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>

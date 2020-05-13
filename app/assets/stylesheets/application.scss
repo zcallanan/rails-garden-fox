@@ -7,8 +7,18 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "mapbox-gl/dist/mapbox-gl";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 // Your CSS partials
 @import "components/index";
 @import "components/banner";
 @import "pages/index";
+
+#background-color {
+  background-color: #F3FBFC;
+}
+
+body {
+  padding-top: 50px;
+}

@@ -1,1 +1,19 @@
-<%= @gardens %>
+<div class="row">
+  <div class="col-7">
+    <% @gardens.each do |garden| %>
+      <% if garden.availability %>
+        <%= link_to garden_path(garden), class: "garden-link" do %>
+          <%= render :partial => "garden_card", object: garden, as: :item %>
+        <% end %>
+      <% end %>
+    <% end  %>
+  </div>
+  <div class="col-5">
+    <div id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
+</div>
+
+
+

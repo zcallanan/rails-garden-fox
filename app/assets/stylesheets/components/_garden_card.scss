@@ -1,0 +1,56 @@
+.card-product {
+  margin-left: 24px;
+  background-color: #F3FBFC;
+  justify-content: start;
+}
+
+.inner-card {
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  border-top: 1px #EBEBEB solid;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  flex-grow: 1;
+}
+
+.inner-card img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.card-product-infos h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-infos p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 0px;
+}
+
+.card-product .card-product-infos {
+  padding-left: 16px;
+}
+
+.garden-link, .garden-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+#garden-type {
+  padding-bottom: 12px;
+}
+
+#garden-name {
+  padding-bottom: 12px;
+}
+
+#garden-price {
+  margin-right: -20px;
+}
