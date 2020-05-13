@@ -15,6 +15,7 @@
 require "open-uri"
 
 Garden.destroy_all
+User.destroy_all
 
 user = User.create(
   email: "gmail@gmail.com",
@@ -24,7 +25,7 @@ user = User.create(
   phone_number: "983749326",
   birth_date: 20.years.ago
 )
-
+user.save
 garden = Garden.new(
   name: "Alter Botanischer Garden",
   description: "Old Botanical garden is located in Maxvorstadt, Munich, Bavaria, Germany.",
@@ -36,12 +37,11 @@ garden = Garden.new(
   capacity: 100,
   garden_type: "Garden",
   availability: true,
-  user_id: 1,
+  user:user,
   )
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alter_Botanischer_Garten_Munich.jpg/2560px-Alter_Botanischer_Garten_Munich.jpg"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
-
 garden.save
 
 garden = Garden.new(
@@ -55,7 +55,7 @@ garden = Garden.new(
   capacity: 500,
   garden_type: "Garden",
   availability: true,
-  user_id: 2,
+  user:user,
   )
 image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
 file = URI.open(image)
@@ -74,10 +74,10 @@ garden = Garden.new(
   capacity: 150,
   garden_type: "Garden",
   availability: true,
-  user_id: 2,
+  user:user,
   )
-image = "https://www.kimapa.de/wp-content/uploads/2014/09/Rosengarten_11-1-620x413.jpg"
-file = URI.open(image)
-garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+# image = "https://www.kimapa.de/wp-content/uploads/2014/09/Rosengarten_11-1-620x413.jpg"
+# file = URI.open(image)
+# garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
-garden.save
+# garden.save
