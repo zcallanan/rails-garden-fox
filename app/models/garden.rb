@@ -1,6 +1,7 @@
 class Garden < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
 
   validates :name, :description, :address, :price, :size, :capacity, :garden_type, :availability, :user_id, presence: true
 
