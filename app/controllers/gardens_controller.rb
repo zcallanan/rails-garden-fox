@@ -1,5 +1,6 @@
 class GardensController < ApplicationController
   before_action :set_garden, only: %i[show edit update destroy]
+  before_action :set_booking, only: :show
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
@@ -17,7 +18,9 @@ class GardensController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+  end
 
   def new
     @garden = Garden.new
@@ -72,5 +75,9 @@ class GardensController < ApplicationController
 
   def garden_params
     params.require(:garden).permit(params[:name, :description, :address, :price, :house_rules, :filter_categories, :size, :capacity, :garden_type, :availability, :host_id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:garden_id])
   end
 end
