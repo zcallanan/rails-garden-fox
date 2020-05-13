@@ -14,9 +14,16 @@
 
 require "open-uri"
 
-
-
 Garden.destroy_all
+
+user = User.create(
+  email: "gmail@gmail.com",
+  password: "password",
+  address: "Bogenstreet",
+  country_code: "de",
+  phone_number: "983749326",
+  birth_date: 20.years.ago
+)
 
 garden = Garden.new(
   name: "Alter Botanischer Garden",
@@ -29,7 +36,7 @@ garden = Garden.new(
   capacity: 100,
   garden_type: "Garden",
   availability: true,
-  user_id: 2,
+  user_id: 1,
   )
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alter_Botanischer_Garten_Munich.jpg/2560px-Alter_Botanischer_Garten_Munich.jpg"
 file = URI.open(image)

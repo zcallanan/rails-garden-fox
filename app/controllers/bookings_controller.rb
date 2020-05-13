@@ -6,7 +6,9 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def show; end
+  def show
+    @booking = Booking.new
+  end
 
   def create
     @booking = Booking.new(booking_params)
@@ -37,7 +39,6 @@ class BookingsController < ApplicationController
     end
     # occurs in index
   end
-
 
   private
 
