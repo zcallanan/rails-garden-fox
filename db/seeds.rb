@@ -18,7 +18,7 @@ Garden.destroy_all
 garden = Garden.new(
   name: "Awesome Garden",
   description: "A beautiful garden",
-  location: "Munich",
+  address: "16 Villa Gaudelet, Paris",
   price: 500,
   house_rules: "No parties or pets. No fun!",
   filter_categories: "BBQ, Fireplace",
@@ -33,7 +33,7 @@ garden.save
 garden = Garden.new(
   name: "An okay garden",
   description: "A modest garden",
-  location: "Munich",
+  address: "Munich",
   price: 300,
   house_rules: "Keep noise down.",
   filter_categories: "TV, Fireplace, WiFi",
@@ -48,7 +48,7 @@ garden.save
 garden = Garden.new(
   name: "Sort of a garden",
   description: "It's ok",
-  location: "Munich",
+  address: "Munich",
   price: 500,
   house_rules: "Stay off the grass",
   filter_categories: "BBQ, Fireplace",
@@ -63,7 +63,7 @@ garden.save
 garden = Garden.new(
   name: "An okay garden",
   description: "A modest garden",
-  location: "Munich",
+  address: "Munich",
   price: 300,
   house_rules: "Keep noise down.",
   filter_categories: "TV, Fireplace, WiFi",
@@ -78,7 +78,7 @@ garden.save
 garden = Garden.new(
   name: "Awesome Garden",
   description: "A beautiful garden",
-  location: "Munich",
+  address: "Munich",
   price: 500,
   house_rules: "No parties or pets. No fun!",
   filter_categories: "BBQ, Fireplace",
@@ -93,7 +93,7 @@ garden.save
 garden = Garden.new(
   name: "An okay garden",
   description: "A modest garden",
-  location: "Munich",
+  address: "Munich",
   price: 300,
   house_rules: "Keep noise down.",
   filter_categories: "TV, Fireplace, WiFi",
@@ -108,7 +108,7 @@ garden.save
 garden = Garden.new(
   name: "Sort of a garden",
   description: "It's ok",
-  location: "Munich",
+  address: "Munich",
   price: 500,
   house_rules: "Stay off the grass",
   filter_categories: "BBQ, Fireplace",
