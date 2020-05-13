@@ -12,7 +12,7 @@ class GardensController < ApplicationController
         lat: garden.latitude,
         lng: garden.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { garden: garden }),
-        image_url: helpers.asset_url('https://media.architecturaldigest.com/photos/56f99e6b68aa959e79f3527f/master/w_1600%2Cc_limit/living-roofs-rooftop-gardens-book-02.jpg')
+        image_url: helpers.asset_url('https://image.flaticon.com/icons/svg/67/67347.svg')
       }
     end
   end
