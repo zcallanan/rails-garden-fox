@@ -16,6 +16,7 @@ require "open-uri"
 
 Garden.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 user = User.create(
   email: "a@gmail.com",
@@ -105,6 +106,16 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "21-05-2020",
+  end_date: "23-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Holfgarten",
   description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
@@ -164,6 +175,16 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "26-05-2020",
+  end_date: "31-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Hoftgarten",
   description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
@@ -184,6 +205,16 @@ file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
+
+booking = Booking.new(
+  start_date: "16-05-2020",
+  end_date: "19-05-2020",
+  user_id: user_two.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
 
 
 garden = Garden.new(
@@ -223,4 +254,3 @@ file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
-
