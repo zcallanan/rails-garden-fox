@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/1416572/pexels-photo-1416572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
   <h1>Rent a beautiful Garden</h1>
   <p>Make it a unique experience</p>
+
   <%= render 'landing_form' %>
-  <button type="button" class="btn btn-success">Manage your garden</button>
 </div>
 
 <div class="top-gardens">
@@ -12,7 +12,7 @@
       <% @garden.each do |garden| %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card" style="width: 33vb;">
-            <% if garden.photo.attached?%>
+            <% if garden.photo.attached? %>
             <%= cl_image_tag garden.photo.key, crop: :fill, class: "card-img-top", alt: "Card image cap" %>
             <% end %>
             <div class="card-body">
@@ -23,7 +23,7 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star checked"></span>
                 </div>
               </div>
               <p class="card-text"><%= garden.description %></p>

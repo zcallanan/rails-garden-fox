@@ -1,13 +1,40 @@
-<%= form_with url: gardens_path,
-  local: true,
-  method: :get do |f| %>
-  <%= f.text_field :address,
-    class: "form-control",
-    placeholder: "Enter a location"
-  %>
-  <%= f.select :size, @size_options %>
-  <%= f.select :garden_type, @garden_type_options %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+<%= form_tag gardens_path, method: :get do %>
+  <div class="product-search">
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:address],
+        class: "search-input",
+        placeholder: "Address"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:start_date],
+        class: "search-input",
+        placeholder: "From:"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:end_date],
+        class: "search-input",
+        placeholder: "To:"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= number_field_tag :query,
+        params[:guests],
+        class: "search-input",
+        placeholder: "Number of Guests"
+      %>
+    </div>
+
+    <%= submit_tag "Search", class: "search-button" %>
+  </div>
 <% end %>
 
 
