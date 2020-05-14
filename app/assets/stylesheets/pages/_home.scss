@@ -10,7 +10,7 @@
   background-color: #F1F8F7;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
-  height: 500px;
+  height: 525px;
 }
 
 .card-title {
@@ -36,6 +36,10 @@
 .rating {
   display: flex;
   justify-content: space-between;
+}
+
+.availability {
+  margin-top: 16px;
 }
 
 // Testimonials
@@ -81,3 +85,4 @@
   align-items: center;
   justify-content: center;
 }
+

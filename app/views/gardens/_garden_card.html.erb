@@ -31,7 +31,11 @@
             </div>
           <div class="col-4">
             <h5 id="card-price"><%= item.price %>€ / per day</h5>
+            <p><strong>Available from:</strong> <br>
+            <%= item.start_time %>:00 to <%= item.start_time + item.duration %>:00 </p>
           </div>
+          
+
           </div>
         </div>
       </div>
