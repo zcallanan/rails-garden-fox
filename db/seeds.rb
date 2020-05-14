@@ -77,6 +77,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 9,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -96,6 +98,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 9,
+  duration: 8,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -125,6 +129,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 9,
+  duration: 9,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -144,6 +150,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 10,
+  duration: 7,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -225,6 +233,8 @@ garden = Garden.new(
   house_rules: "Public garden, will require barriers to make it private",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
+  start_time: 9,
+  duration: 10,
   capacity: 500,
   garden_type: "Garden",
   availability: true,
@@ -245,6 +255,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 9,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
