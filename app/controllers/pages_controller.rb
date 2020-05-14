@@ -10,7 +10,6 @@ class PagesController < ApplicationController
       'Park',
       'Rooftop']
 
-    @garden = Garden.all
-
+    @gardens = Garden.all
   end
 end

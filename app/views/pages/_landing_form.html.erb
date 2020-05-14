@@ -2,7 +2,7 @@
   <div class="product-search">
 
     <div class="search-element">
-      <%= text_field_tag :query,
+      <%= text_field_tag :address,
         params[:address],
         class: "search-input",
         placeholder: "Address"
@@ -10,7 +10,7 @@
     </div>
 
     <div class="search-element">
-      <%= text_field_tag :query,
+      <%= text_field_tag :start_date,
         params[:start_date],
         class: "search-input",
         placeholder: "From:"
@@ -18,7 +18,7 @@
     </div>
 
     <div class="search-element">
-      <%= text_field_tag :query,
+      <%= text_field_tag :end_date,
         params[:end_date],
         class: "search-input",
         placeholder: "To:"
@@ -26,8 +26,8 @@
     </div>
 
     <div class="search-element">
-      <%= number_field_tag :query,
-        params[:guests],
+      <%= number_field_tag :capacity,
+        params[:capacity],
         class: "search-input",
         placeholder: "Number of Guests"
       %>
