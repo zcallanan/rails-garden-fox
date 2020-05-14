@@ -15,15 +15,37 @@
 require "open-uri"
 
 Garden.destroy_all
+User.destroy_all
 
 user = User.create(
-  email: "gmail@gmail.com",
+  email: "a@gmail.com",
   password: "password",
   address: "Bogenstreet",
   country_code: "de",
   phone_number: "983749326",
   birth_date: 20.years.ago
 )
+user.save
+
+user_two = User.create(
+  email: "b@gmail.com",
+  password: "password",
+  address: "Bogenstreet",
+  country_code: "de",
+  phone_number: "983749326",
+  birth_date: 20.years.ago
+)
+user_two.save
+
+user_three = User.create(
+  email: "c@gmail.com",
+  password: "password",
+  address: "Bogenstreet",
+  country_code: "de",
+  phone_number: "983749326",
+  birth_date: 20.years.ago
+)
+user_three.save
 
 garden = Garden.new(
   name: "Alter Botanischer Garden",
@@ -36,7 +58,7 @@ garden = Garden.new(
   capacity: 100,
   garden_type: "Garden",
   availability: true,
-  user_id: 1,
+  user_id: user.id
   )
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alter_Botanischer_Garten_Munich.jpg/2560px-Alter_Botanischer_Garten_Munich.jpg"
 file = URI.open(image)
@@ -55,7 +77,7 @@ garden = Garden.new(
   capacity: 500,
   garden_type: "Garden",
   availability: true,
-  user_id: 2,
+  user_id: user_two.id
   )
 image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
 file = URI.open(image)
@@ -74,7 +96,7 @@ garden = Garden.new(
   capacity: 150,
   garden_type: "Garden",
   availability: true,
-  user_id: 2,
+  user_id: user_three.id
   )
 image = "https://www.kimapa.de/wp-content/uploads/2014/09/Rosengarten_11-1-620x413.jpg"
 file = URI.open(image)
