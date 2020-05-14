@@ -22,7 +22,7 @@ class GardensController < ApplicationController
         lat: garden.latitude,
         lng: garden.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { garden: garden }),
-        image_url: helpers.asset_url('https://image.flaticon.com/icons/svg/67/67347.svg')
+        image_url: helpers.asset_url('point.svg')
       }
     end
   end
