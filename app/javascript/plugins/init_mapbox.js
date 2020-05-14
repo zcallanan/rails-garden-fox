@@ -7,9 +7,8 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
 
-
 const initMapbox = () => {
-  console.log('Hello from Mapbox!')
+
   const mapElement = document.getElementById('map');
 
   if (mapElement) { // only build a map if there's a div#map to inject into

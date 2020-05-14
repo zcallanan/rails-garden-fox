@@ -24,9 +24,9 @@ class Garden < ApplicationRecord
     where(garden_type: value)
   }
 
-  scope :search_by_date, lambda { |array|
-    #start end Bookings table
-    Garden.joins(:bookings).merge(Booking.select_by_date(array[0], array[1]))
-  }
+  # scope :search_by_date, lambda { |array|
+  #   #start end Bookings table
+  #   Garden.joins(:bookings).merge(Booking.select_by_date(array[0], array[1]))
+  # }
 
 end
