@@ -2,7 +2,7 @@
 
 // create a new Stimulus controller by extending stimulus-flatpickr wrapper controller
 export default class extends Flatpickr {
-  // static targets = ['append']
+  static targets = ['append']
 
   connect() {
     console.log('hello');
