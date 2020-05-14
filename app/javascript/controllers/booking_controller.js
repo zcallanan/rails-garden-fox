@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["startDate", "endDate", "days", "priceTotal"]
 
   connect() {
-    console.log('hello from controller', this.data.get("price"))
+    console.log('hello from controller', this.data.get("price"), this.data.get("duration"))
   }
 
   calculate() {
@@ -14,7 +14,9 @@ export default class extends Controller {
 
     const difference = Math.abs(this.endDate - this.startDate)
     const days = Math.ceil(difference / (1000 * 60 * 60 * 24))
+
     const total = days * this.data.get("price")
+    
     this.daysTarget.innerHTML = days
     this.priceTotalTarget.innerHTML = total
     

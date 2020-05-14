@@ -16,6 +16,7 @@ require "open-uri"
 
 Garden.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 user = User.create(
   email: "a@gmail.com",
@@ -57,6 +58,7 @@ garden = Garden.new(
   size: 1000,
   capacity: 100,
   garden_type: "Garden",
+  featured: true,
   start_time: 8,
   duration: 8,
   availability: true,
@@ -76,6 +78,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 9,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -87,7 +91,7 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 garden.save
 
 garden = Garden.new(
-  name: "Luxury gard",
+  name: "Luxury garden",
   description: "The is good for a perfect time with famaly and friends in the center of Grünwald, Germany.",
   address: "Portenlängerstraße 3, 82031 Grünwald",
   price: 100,
@@ -95,6 +99,9 @@ garden = Garden.new(
   filter_categories: "Green Pool Fountain Flowers Trees Lawn Temple",
   size: 300,
   capacity: 500,
+  start_time: 9,
+  duration: 8,
+  featured: true,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -105,6 +112,16 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "21-05-2020",
+  end_date: "23-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Rooftop gold",
   description: "Wonderful Rooftop in the center of Munich, Germany, located between Marienplatz and Sendlingertor.",
@@ -114,6 +131,9 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 300,
   capacity: 100,
+  start_time: 9,
+  duration: 8,
+  featured: true,
   garden_type: "Rooftop",
   availability: true,
   user_id: user.id
@@ -133,6 +153,9 @@ garden = Garden.new(
   filter_categories: "Green with a big BBQ setup",
   size: 100,
   capacity: 50,
+  start_time: 10,
+  duration: 7,
+  featured: true,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -164,6 +187,16 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "26-05-2020",
+  end_date: "31-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Rooftop farm",
   description: "Fresh food from the roof.",
@@ -185,9 +218,19 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "16-05-2020",
+  end_date: "19-05-2020",
+  user_id: user_two.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 
 garden = Garden.new(
-  name: "Gardendream",
+  name: "Garden dream",
   description: "The beauty in green is a peradise in green",
   address: "Ledererstraße 15, 80331 München",
   price: 250,
@@ -206,7 +249,7 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 garden.save
 
 garden = Garden.new(
-  name: "Green House",
+  name: "Green garden",
   description: "English green for the perfect Tea time.",
   address: "Altenhofstraße 25, 80331 München",
   price: 70,
@@ -280,4 +323,3 @@ file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
-
