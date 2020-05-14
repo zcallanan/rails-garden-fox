@@ -1,8 +1,39 @@
+
 <%= form_tag gardens_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Enter a location"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div class="product-search">
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:address],
+        class: "search-input",
+        placeholder: "Address"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:start_date],
+        class: "search-input",
+        placeholder: "From:"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:end_date],
+        class: "search-input",
+        placeholder: "To:"
+      %>
+    </div>
+
+    <div class="search-element">
+      <%= number_field_tag :query,
+        params[:guests],
+        class: "search-input",
+        placeholder: "Number of Guests"
+      %>
+    </div>
+
+    <%= submit_tag "Search", class: "search-button" %>
+  </div>
 <% end %>

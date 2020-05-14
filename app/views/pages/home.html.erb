@@ -2,8 +2,7 @@
   <h1>Rent a beautiful Garden</h1>
   <p>Make it a unique experience</p>
   <%#= link_to 'Rent a garden', gardens_path(), class: "btn btn-success"%>
-  <%= render 'location_form' %>
-  <button type="button" class="btn btn-success">Manage your garden</button>
+  <%= render 'landing_form' %>
 </div>
 
 <div class="top-gardens">
@@ -13,7 +12,7 @@
       <% @garden.each do |garden| %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="card" style="width: 33vb;">
-            <% if garden.photo.attached?%>
+            <% if garden.photo.attached? %>
             <%= cl_image_tag garden.photo.key, crop: :fill, class: "card-img-top", alt: "Card image cap" %>
             <% end %>
             <div class="card-body">
@@ -24,7 +23,7 @@
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star checked"></span>
                 </div>
               </div>
               <p class="card-text"><%= garden.description %></p>
