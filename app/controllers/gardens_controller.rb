@@ -3,11 +3,19 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    if params[:query].present?
-      @gardens = policy_scope(Garden.geocoded.where("address ILIKE ?", "%#{params[:query]}%")).order(updated_at: :desc)
-    else
-      @gardens = policy_scope(Garden.geocoded).order(updated_at: :desc)
-    end
+
+    @gardens = policy_scope(garden_search.geocoded).order(updated_at: :desc)
+    @min_price, @max_price = @gardens.map(&:price).minmax
+    @size_options = [
+      ['Small', '50_200'],
+      ['Medium', '201_500'],
+      ['Large', '501_1000'],
+      ['X-Large', '1001_30000']
+    ]
+    @garden_type_options = ['Botanical',
+      'Park',
+      'Rooftop']
+
 
     @markers = @gardens.map do |garden|
       {
@@ -76,6 +84,24 @@ class GardensController < ApplicationController
 
   def garden_params
     params.require(:garden).permit(params[:photo, :name, :description, :address, :price, :house_rules, :filter_categories, :size, :capacity, :garden_type, :availability, :host_id])
+  end
+
+  def sizes
+    return nil if params[:size].blank?
+
+    # convert to array of ranges
+    Range.new(*params[:size].split('_').map(&:to_i))
+  end
+
+  def garden_search
+    GardenSearchService.call(
+      address: params[:address],
+      capacity: params[:capacity],
+      size: sizes,
+      garden_type: params[:garden_type],
+      min_price: params[:min_price],
+      max_price: params[:max_price]
+    )
   end
 
 end
