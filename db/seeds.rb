@@ -65,13 +65,88 @@ garden = Garden.new(
 image = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alter_Botanischer_Garten_Munich.jpg/2560px-Alter_Botanischer_Garten_Munich.jpg"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+garden.save
+
+garden = Garden.new(
+  name: "Hopfgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 2, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
 garden = Garden.new(
-  name: "Hofgarten",
+  name: "Hoffgarten",
   description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 1, 80538 München",
+  address: "Hofgartenstraße 3, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Holfgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 4, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Hotgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 5, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Hoflgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 6, 80538 München",
   price: 500,
   house_rules: "Public garden, will require barriers to make it private",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
@@ -81,7 +156,7 @@ garden = Garden.new(
   duration: 6,
   garden_type: "Garden",
   availability: true,
-  user_id: user_two.id
+  user_id: user.id
   )
 image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
 file = URI.open(image)
@@ -90,9 +165,9 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 garden.save
 
 garden = Garden.new(
-  name: "Rosengarten Untergiesing",
-  description: "This serene, grassy park is known for its colorful rose gardens that bloom in June & July.",
-  address: "Sachsenstraße 2, 81543 München",
+  name: "Hoftgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 7, 80538 München",
   price: 500,
   house_rules: "Public garden, will require barriers to make it private",
   filter_categories: "Fountain Flowers Trees River",
@@ -102,10 +177,50 @@ garden = Garden.new(
   duration: 10,
   garden_type: "Garden",
   availability: true,
-  user_id: user_three.id
+  user_id: user.id
   )
-image = "https://www.kimapa.de/wp-content/uploads/2014/09/Rosengarten_11-1-620x413.jpg"
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
+
+
+garden = Garden.new(
+  name: "Hofsgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 9, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Hofalgarten",
+  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
+  address: "Hofgartenstraße 10, 80538 München",
+  price: 500,
+  house_rules: "Public garden, will require barriers to make it private",
+  filter_categories: "Fountain Flowers Trees Lawn Temple",
+  size: 4000,
+  capacity: 500,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
