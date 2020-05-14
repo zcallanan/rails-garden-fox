@@ -29,6 +29,7 @@
               </div>
               <p class="card-text"><%= garden.description %></p>
               <%= link_to 'Show Garden', garden_path(garden), class: 'btn btn-success'%>
+              <p class="availability"> <strong>Available from:</strong> <%= garden.start_time %>:00 to <%= garden.start_time + garden.duration %>:00 </p>
             </div>
           </div>
         </div>
