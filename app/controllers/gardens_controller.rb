@@ -22,7 +22,7 @@ class GardensController < ApplicationController
         lat: garden.latitude,
         lng: garden.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { garden: garden }),
-        image_url: helpers.asset_url('https://image.flaticon.com/icons/svg/67/67347.svg')
+        image_url: helpers.asset_url('point.svg')
       }
     end
   end
@@ -93,6 +93,14 @@ class GardensController < ApplicationController
     Range.new(*params[:size].split('_').map(&:to_i))
   end
 
+  def start_date
+    params[:start_date].present? ? Date.parse(params[:start_date]) : nil
+  end
+
+  def end_date
+    params[:end_date].present? ? Date.parse(params[:end_date]) : nil
+  end
+
   def garden_search
     GardenSearchService.call(
       address: params[:address],
@@ -100,7 +108,9 @@ class GardensController < ApplicationController
       size: sizes,
       garden_type: params[:garden_type],
       min_price: params[:min_price],
-      max_price: params[:max_price]
+      max_price: params[:max_price],
+      start_date: start_date,
+      end_date: end_date
     )
   end
 

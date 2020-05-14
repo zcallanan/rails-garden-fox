@@ -9,14 +9,22 @@
   display: flex;
   align-items: start;
   border-top: 1px #EBEBEB solid;
-  padding-bottom: 24px;
-  padding-top: 24px;
+  padding: 16px;
   flex-grow: 1;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  background-color: #fdfdfd;
+  margin: 10px;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.inner-card:hover {
+  opacity: .84;
 }
 
 .inner-card img {
   height: 200px;
-  width: 300px;
+  width: 250px;
   object-fit: cover;
 }
 
