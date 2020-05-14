@@ -58,6 +58,7 @@ garden = Garden.new(
   size: 1000,
   capacity: 100,
   garden_type: "Garden",
+  featured: true,
   start_time: 8,
   duration: 8,
   availability: true,
@@ -100,6 +101,7 @@ garden = Garden.new(
   capacity: 500,
   start_time: 9,
   duration: 8,
+  featured: true,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -152,6 +154,7 @@ garden = Garden.new(
   capacity: 500,
   start_time: 10,
   duration: 7,
+  featured: true,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
