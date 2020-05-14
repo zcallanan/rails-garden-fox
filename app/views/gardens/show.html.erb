@@ -1,7 +1,9 @@
 
-<div class="showpage-banner" ></div>
-
-<%#= render 'bookings/widget', booking: @booking, garden: @garden %>
+<div>
+  <% if @garden.photo.attached? %>
+    <%= cl_image_tag @garden.photo.key, height: 600, crop: :fill %>
+  <% end %>
+</div>
 
 <div class="container">
   <div class="row">
@@ -39,42 +41,7 @@
       <div class="assessment mb-3">
         <h4><strong>Select your garden time</strong></h4>
       </div>
-        <%= simple_form_for([@garden, @booking]) do |f| %>
-      <h3><strong> <span class="price">€<%= number_with_delimiter (@garden.price)%>
-        </strong></span> <i class="fas fa-piggy-bank"></i></h3>
-      <hr>
-      <div class="form-row">
-        <%= f.input :start_date,
-          as: :string,
-          label: 'Dates',
-          placeholder: 'From',
-          input_html: {
-            value: f.object.start_date || Time.zone.now,
-            data: {
-              controller: 'datepicker',
-              datepicker_show_months: 1,
-              datepicker_min_date: Time.zone.today
-            }
-          }
-        %>
-        <%= f.input :end_date,
-          as: :string,
-          label: false,
-          placeholder: 'To',
-          disabled: false,
-          input_html: {
-            value: f.object.end_date,
-            data: {
-              controller: 'datepicker',
-              datepicker_show_months: 1,
-              datepicker_min_date: Time.zone.today
-            }
-          }
-        %>
-      </div>
-      <%end%>
-      <div type="button" class="btn btn-success btn-lg btn-block mt-3"><strong>Book now!</strong></div>
-      <h1><i class="fas fa-award mt-3"></i> <button type="button" class="btn btn-outline-success">Superhost</button></h1>
+        <%= render 'bookings/widget', booking: @booking, garden: @garden %>
     </div>
   </div>
 </div>

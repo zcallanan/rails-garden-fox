@@ -57,6 +57,8 @@ garden = Garden.new(
   size: 1000,
   capacity: 100,
   garden_type: "Garden",
+  start_time: 8,
+  duration: 8,
   availability: true,
   user_id: user.id
   )
@@ -150,6 +152,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 8,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -166,9 +170,11 @@ garden = Garden.new(
   address: "Hofgartenstraße 7, 80538 München",
   price: 500,
   house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  capacity: 500,
+  filter_categories: "Fountain Flowers Trees River",
+  size: 3000,
+  capacity: 150,
+  start_time: 9,
+  duration: 10,
   garden_type: "Garden",
   availability: true,
   user_id: user.id

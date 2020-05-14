@@ -12,7 +12,6 @@
 
 // Your CSS partials
 @import "components/index";
-@import "components/banner";
 @import "pages/index";
 
 #background-color {
@@ -21,4 +20,8 @@
 
 body {
   padding-top: 50px;
+}
+
+.notice {
+  margin: 0px;
 }

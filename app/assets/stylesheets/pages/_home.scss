@@ -10,14 +10,27 @@
   background-color: #F1F8F7;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
+  height: 500px;
 }
 
 .card-title {
   font-weight: bold;
 }
 
+.card-img-top {
+  height: 250px;
+}
+
+.card-title {
+  width: 200px;
+}
+
 .checked {
   color: orange;
+}
+
+.stars {
+  font-size: 12px;
 }
 
 .rating {

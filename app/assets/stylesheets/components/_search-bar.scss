@@ -1,0 +1,51 @@
+.product-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  opacity: .9;
+  box-shadow: rgba(0,0,0,.172549) 0 6px 12px 0;
+  cursor: pointer;
+}
+
+.search-element {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  border-right: 1px solid rgba(10,10,10,.1);
+  padding: 0 1em;
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1em;
+  margin-top: 4px;
+}
+
+.search-input:focus {
+  box-shadow: 0px 1px 0px 0px #5CA08B;
+}
+
+.search-button {
+  display: inline-block;
+  flex-grow: 1;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1em;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 100;
+  border: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: white;
+  background-color: #5CA08B;
+  transition: background-color 0.8s ease;
+}
