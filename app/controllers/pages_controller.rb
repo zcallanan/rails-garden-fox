@@ -11,6 +11,5 @@ class PagesController < ApplicationController
       'Rooftop']
 
     @gardens = Garden.all
-
   end
 end
