@@ -1,7 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/1416572/pexels-photo-1416572.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
   <h1>Rent a beautiful Garden</h1>
   <p>Make it a unique experience</p>
-  <%= link_to 'Rent a garden', gardens_path(), class: "btn btn-success"%>
+  <%#= link_to 'Rent a garden', gardens_path(), class: "btn btn-success"%>
+  <%= render 'location_form' %>
   <button type="button" class="btn btn-success">Manage your garden</button>
 </div>
 
@@ -75,27 +76,27 @@
 <div class="wrapper">
   <h1>What people say</h1>
   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
-   <div class="testimonials"> 
+   <div class="testimonials">
     <div class="testimonial">
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Anna F.</strong></h5>
-      </div>  
+      </div>
     </div>
       <div class="testimonial">
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Danny G.</strong></h5>
-      </div>  
+      </div>
     </div>
       <div class="testimonial">
       <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Marc M.</strong></h5>
-      </div>  
+      </div>
     </div>
   </div>
 

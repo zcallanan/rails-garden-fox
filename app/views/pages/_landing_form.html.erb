@@ -1,0 +1,8 @@
+<%= form_tag gardens_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Enter a location"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
