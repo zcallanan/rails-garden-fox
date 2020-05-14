@@ -9,5 +9,8 @@ class PagesController < ApplicationController
     @garden_type_options = ['Botanical',
       'Park',
       'Rooftop']
+
+    @garden = Garden.all
+
   end
 end
