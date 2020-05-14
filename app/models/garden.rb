@@ -24,9 +24,13 @@ class Garden < ApplicationRecord
     where(garden_type: value)
   }
 
-  # scope :search_by_date, lambda { |array|
-  #   #start end Bookings table
-  #   Garden.joins(:bookings).merge(Booking.select_by_date(array[0], array[1]))
-  # }
+  scope :search_by_available_dates, lambda { |from, to|
+    sql_query = " \
+      bookings.garden_id IS NULL \
+      OR ((bookings.start_date NOT BETWEEN :from AND :to) \
+      AND (bookings.end_date NOT BETWEEN :from AND :to)) \
+    "
+    left_outer_joins(:bookings).where(sql_query, from: from, to: to)
+  }
 
 end
