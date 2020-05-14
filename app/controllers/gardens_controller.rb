@@ -3,7 +3,11 @@ class GardensController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @gardens = policy_scope(Garden.geocoded).order(updated_at: :desc)
+    if params[:query].present?
+      @gardens = policy_scope(Garden.geocoded.where("address ILIKE ?", "%#{params[:query]}%")).order(updated_at: :desc)
+    else
+      @gardens = policy_scope(Garden.geocoded).order(updated_at: :desc)
+    end
 
     @markers = @gardens.map do |garden|
       {
