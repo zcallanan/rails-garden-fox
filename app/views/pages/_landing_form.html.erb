@@ -1,8 +1,13 @@
-<%= form_tag gardens_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
+<%= form_with url: gardens_path,
+  local: true,
+  method: :get do |f| %>
+  <%= f.text_field :address,
     class: "form-control",
     placeholder: "Enter a location"
   %>
+  <%= f.select :size, @size_options %>
+  <%= f.select :garden_type, @garden_type_options %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+
+

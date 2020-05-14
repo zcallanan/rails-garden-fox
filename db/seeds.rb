@@ -57,6 +57,8 @@ garden = Garden.new(
   size: 1000,
   capacity: 100,
   garden_type: "Garden",
+  start_time: 8,
+  duration: 8,
   availability: true,
   user_id: user.id
   )
@@ -75,6 +77,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 4000,
   capacity: 500,
+  start_time: 8,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user_two.id
@@ -94,6 +98,8 @@ garden = Garden.new(
   filter_categories: "Fountain Flowers Trees River",
   size: 3000,
   capacity: 150,
+  start_time: 9,
+  duration: 10,
   garden_type: "Garden",
   availability: true,
   user_id: user_three.id
