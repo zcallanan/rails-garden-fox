@@ -3,27 +3,42 @@
   <div class="row">
     <div class="col-8 shadow p-3 mb-5 bg-white rounded p-5">
       <h1><strong> <%= @garden.name %> <%= @garden.address %> </strong></h1>
-        <div class="col">
-            <p> <%= @garden.size %> <strong>size</strong>  <%= @garden.capacity %>
+        <div class="col p-0 border-bottom">
+          <p> <%= @garden.size %> <strong>m<sup>2</sup></strong>  <%= @garden.capacity %>
             <strong>capacity</strong> <%= @garden.garden_type %> <strong>type</strong> </p>
         </div>
-      <div class="col">
-        <h2>Description</h2>
-          <p> <%= @garden.description %> </p>
+
+        <div class="col p-0 pt-3">
+          <p>⭐⭐⭐⭐⭐ <strong>Rating</strong></p>
+        </div>
+
+      <div class="col p-0">
+          <h2>Description</h2>
+            <p> <%= @garden.description %> </p>
       </div>
-      <div class="col">
-        <h2>House rules</h2>
-          <p> <%= @garden.house_rules %> </p>
+
+      <div class="col p-0">
+          <h2>House rules</h2>
+            <p> <%= @garden.house_rules %> </p>
+      </div>
+      <div class="col p-0">
+        <h3>
+          <i class="fas fa-wifi pr-3"></i>
+          <i class="fas fa-parking pr-3"></i>
+          <i class="fas fa-restroom pr-3"></i>
+          <i class="fas fa-bed pr-3 "></i>
+        </h3>
       </div>
     </div>
 
     <div class="col-4 shadow p-3 mb-5 bg-white rounded p-5">
-      <div class="assessment">
-        <h2>Select your travel dates so that we can show you the price</h2>
+      <div class="assessment mb-3">
+        <h3><strong>Select your travel dates</strong></h3>
       </div>
         <%= simple_form_for([@garden, @booking]) do |f| %>
-      <h3><span class="price">€<%= number_with_delimiter(@garden.price) %></span> per day</h3>
-        <hr>
+      <h3><strong> <span class="price">€<%= number_with_delimiter (@garden.price)%>
+        </strong></span> Day <i class="fas fa-piggy-bank"></i></h3>
+      <hr>
       <div class="form-row">
         <%= f.input :start_date,
           as: :string,
@@ -54,7 +69,7 @@
         %>
       </div>
       <%end%>
-      <div type="Book now!" class="btn btn-danger">Book now!</div>
+      <div type="button" class="btn btn-danger btn-lg btn-block mt-3"><strong>Book now!</strong></div>
     </div>
   </div>
 </div>
