@@ -37,11 +37,11 @@
 
     <div class="col-4 shadow p-3 mb-5 bg-white rounded p-5">
       <div class="assessment mb-3">
-        <h3><strong>Select your travel dates</strong></h3>
+        <h4><strong>Select your garden time</strong></h4>
       </div>
         <%= simple_form_for([@garden, @booking]) do |f| %>
       <h3><strong> <span class="price">€<%= number_with_delimiter (@garden.price)%>
-        </strong></span> Day <i class="fas fa-piggy-bank"></i></h3>
+        </strong></span> <i class="fas fa-piggy-bank"></i></h3>
       <hr>
       <div class="form-row">
         <%= f.input :start_date,
@@ -73,7 +73,8 @@
         %>
       </div>
       <%end%>
-      <div type="button" class="btn btn-danger btn-lg btn-block mt-3"><strong>Book now!</strong></div>
+      <div type="button" class="btn btn-success btn-lg btn-block mt-3"><strong>Book now!</strong></div>
+      <h1><i class="fas fa-award mt-3"></i> <button type="button" class="btn btn-outline-success">Superhost</button></h1>
     </div>
   </div>
 </div>
