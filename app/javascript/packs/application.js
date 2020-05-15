@@ -3,13 +3,13 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import 'flatpickr/dist/flatpickr.css';
 
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+import 'flatpickr/dist/flatpickr.css';
+require("flatpickr/dist/themes/material_green.css")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -42,6 +42,18 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 window.addEventListener('DOMContentLoaded', (event) => {
   initMapbox();
+
+  flatpickr("#start-date", {
+    dateFormat: "d-m-Y",
+    altInput: true,
+    altFormat: "j F, Y",
+  });
+
+  flatpickr("#end-date", {
+    dateFormat: "d-m-Y",
+    altInput: true,
+    altFormat: "j F, Y",
+  });
 });
 
 import { Application } from 'stimulus'
@@ -55,3 +67,5 @@ application.load(definitionsFromContext(context))
 
 // Manually register Flatpickr as a stimulus controller
 application.register('flatpickr', Flatpickr)
+
+

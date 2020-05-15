@@ -37,9 +37,9 @@
     <%= f.input :birth_date,
                 as: :string,
                 label: 'Birth Date',
-                placeholder: '',
                 hint: "leave it blank if you don't want to change it",
                 input_html: {
+                  class: "flatpickr",
                   data: {
                     max_date: Time.zone.today - 6570,
                     controller: 'datepicker'
