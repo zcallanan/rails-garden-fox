@@ -30,6 +30,7 @@
                 </div>
                 <p class="card-text"><%= garden.description %></p>
                 <%= link_to 'Show Garden', garden_path(garden), class: 'btn btn-success'%>
+                <p class="availability"> <strong>Available from:</strong> <%= garden.start_time %>:00 to <%= garden.start_time + garden.duration %>:00 </p>
               </div>
             </div>
           </div>
@@ -66,10 +67,14 @@
     </div>
   </div>
 </div>
-<div class="footer">
-    <h2><i class="fab fa-facebook-square"></i></h2>
-    <h2><i class="fab fa-instagram"></i></h2>
-    <h2><i class="fas fa-envelope-square"></i></h2>
-    <p><i class="far fa-copyright"></i> by DATE FOX </p>
 
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fas fa-envelope-square"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <i class="far fa-copyright"></i> by DATE FOX
+  </div>
 </div>
