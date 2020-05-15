@@ -14,7 +14,11 @@
         params[:start_date],
         class: "search-input flatpickr",
         id: "start-date",
-        placeholder: "From:"
+        placeholder: "From:",
+        data: {
+          min_date: Time.zone.today,
+          controller: 'datepicker'
+        }
       %>
     </div>
 
@@ -23,7 +27,11 @@
         params[:end_date],
         class: "search-input flatpickr",
         id: "end-date",
-        placeholder: "To:"
+        placeholder: "To:",
+        data: {
+          min_date: Time.zone.today,
+          controller: 'datepicker'
+        }
       %>
     </div>
 

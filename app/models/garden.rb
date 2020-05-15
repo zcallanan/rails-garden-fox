@@ -13,7 +13,7 @@ class Garden < ApplicationRecord
   }
 
   scope :search_by_capacity, lambda { |number|
-    where("capacity < ?", "#{number}")
+    where("capacity > ?", "#{number}")
   }
 
   scope :search_by_size, lambda { |range|
