@@ -1,7 +1,7 @@
 
 <div>
   <% if @garden.photo.attached? %>
-    <%= cl_image_tag @garden.photo.key, height: 600, crop: :fill %>
+    <%= cl_image_tag @garden.photo.key, crop: :fill, class:"show-banner" %>
   <% end %>
 </div>
 

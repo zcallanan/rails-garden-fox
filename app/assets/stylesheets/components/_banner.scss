@@ -21,7 +21,12 @@
 }
 
 .showpage-banner {
-  width: 100vw;
-  height: 600px;
   background-color: #dddddd;
+}
+
+.show-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  // height: 600px;
 }
