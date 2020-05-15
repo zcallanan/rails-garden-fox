@@ -52,7 +52,7 @@ garden = Garden.new(
   name: "Alter Botanischer Garden",
   description: "Old Botanical garden is located in Maxvorstadt, Munich, Bavaria, Germany.",
   address: "Sophienstraße 7, 80333 München",
-  price: 500,
+  price: 550,
   house_rules: "Public garden, will require barriers to make it private",
   filter_categories: "Fountain Flowers Trees",
   size: 1000,
@@ -94,7 +94,7 @@ garden = Garden.new(
   name: "Luxury garden",
   description: "The is good for a perfect time with famaly and friends in the center of Grünwald, Germany.",
   address: "Portenlängerstraße 3, 82031 Grünwald",
-  price: 100,
+  price: 600,
   house_rules: "Private garden, partys are not welcome",
   filter_categories: "Green Pool Fountain Flowers Trees Lawn Temple",
   size: 300,
@@ -126,7 +126,7 @@ garden = Garden.new(
   name: "Rooftop gold",
   description: "Wonderful Rooftop in the center of Munich, Germany, located between Marienplatz and Sendlingertor.",
   address: "Maximilianstraße 4, 80538 München",
-  price: 1500,
+  price: 500,
   house_rules: "Public garden, will require barriers to make it private.",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 300,
@@ -148,7 +148,7 @@ garden = Garden.new(
   name: "BBQ garden",
   description: "Perfect for famaly and friends with good food.",
   address: "Schönfeldstraße 6, 80539 München",
-  price: 80,
+  price: 180,
   house_rules: "Private garden, loud music is not allowed.",
   filter_categories: "Green with a big BBQ setup",
   size: 100,
@@ -170,7 +170,7 @@ garden = Garden.new(
   name: "Rooftop Berlin",
   description: "The best view in over Berlin in private atmosfaere.",
   address: "Alte Jakobstraße 8, 10969 Berlin",
-  price: 30,
+  price: 230,
   house_rules: "Do wath you wan't, but with love.",
   filter_categories: "Couchset",
   size: 100,
@@ -201,7 +201,7 @@ garden = Garden.new(
   name: "Rooftop farm",
   description: "Fresh food from the roof.",
   address: "Hofgraben 10, 80539 München",
-  price: 25,
+  price: 280,
   house_rules: "Private garden for urban farmers only.",
   filter_categories: "Farm",
   size: 500,
@@ -237,6 +237,8 @@ garden = Garden.new(
   house_rules: "Private garden only for good people",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
   size: 1500,
+  start_time: 9,
+  duration: 8,
   capacity: 80,
   garden_type: "Garden",
   availability: true,
@@ -248,15 +250,27 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "24-05-2020",
+  end_date: "31-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Green garden",
   description: "English green for the perfect Tea time.",
   address: "Altenhofstraße 25, 80331 München",
-  price: 70,
+  price: 160,
   house_rules: "Private garden for Tea lovers only",
   filter_categories: "English green and Tea",
   size: 320,
   capacity: 150,
+  start_time: 8,
+  duration: 6,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
@@ -267,14 +281,26 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "23-05-2020",
+  end_date: "29-05-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Wild garden",
   description: "The perfect place to have fun",
   address: "Am Einlaß 12, 80469 München",
-  price: 35,
+  price: 135,
   house_rules: "Puplic garden for a good time",
   filter_categories: "Party",
   size: 400,
+  start_time: 7,
+  duration: 8,
   capacity: 250,
   garden_type: "Garden",
   availability: true,
@@ -286,14 +312,26 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
+booking = Booking.new(
+  start_date: "26-05-2020",
+  end_date: "10-06-2020",
+  user_id: user.id,
+  garden_id: garden.id,
+  booking_price: garden.price
+)
+
+booking.save
+
 garden = Garden.new(
   name: "Cocktail garden",
   description: "Good place to have a drink",
   address: "Oberanger 18, 80331 München",
-  price: 55,
+  price: 255,
   house_rules: "Puplic garden for a good time",
   filter_categories: "Party",
   size: 200,
+  start_time: 11,
+  duration: 8,
   capacity: 100,
   garden_type: "Garden",
   availability: true,
@@ -309,10 +347,12 @@ garden = Garden.new(
   name: "Klunkerkranich",
   description: "In the heart of Kreuzberg",
   address: "Karl-Marx-Straße 66, 12043 Berlin",
-  price: 15,
+  price: 205,
   house_rules: "Puplic Rooftop",
   filter_categories: "Pool",
   size: 400,
+  start_time: 9,
+  duration: 10,
   capacity: 300,
   garden_type: "Rooftop",
   availability: true,
@@ -323,3 +363,5 @@ file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
+
+puts("Finished!")
