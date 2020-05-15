@@ -35,6 +35,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
 
   initMapbox();
+  bookingBtn();
 });
 
 import "controllers"
@@ -62,4 +63,4 @@ application.register('flatpickr', Flatpickr)
 
 import { bookingBtn } from '../components/booking_request'
 
-bookingBtn();
+
