@@ -30,6 +30,7 @@
                 </div>
                 <p class="card-text"><%= garden.description %></p>
                 <%= link_to 'Show Garden', garden_path(garden), class: 'btn btn-success'%>
+                <p class="availability"> <strong>Available from:</strong> <%= garden.start_time %>:00 to <%= garden.start_time + garden.duration %>:00 </p>
               </div>
             </div>
           </div>
@@ -44,21 +45,30 @@
   <hr>
   <div class="testimonials">
     <div class="testimonial">
-      <p><strong>"</strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet<strong>"</strong></p>
+      <p><strong>"</strong>A place I will not forget! We enjoyed Mocktails
+        and breathtaking views! It has a great atmosphere, the staff is very
+        attentive and friendly, I would highly recommend, it's one of the best
+        bars in Berlin.
+        <strong>"</strong>
+      </p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Anna F.</strong></h5>
       </div>
     </div>
     <div class="testimonial">
-      <p><strong>"</strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet<strong>"</strong></p>
+      <p><strong>"</strong>One of the world's great botanic gardens.Get there as
+        early as you can to avoid the mid-day heat.<strong>"</strong>
+     </p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Danny G.</strong></h5>
       </div>
     </div>
     <div class="testimonial">
-      <p><strong>"</strong>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet<strong>"</strong></p>
+      <p><strong>"</strong>Really like this place to relax and buying time to see
+        some of the most beautiful unique orchids and gardens.<strong>"</strong>
+      </p>
       <div class="test-user">
         <i class="far fa-user-circle"></i>
         <h5><strong>Marc M.</strong></h5>
