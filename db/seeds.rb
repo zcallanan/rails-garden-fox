@@ -58,7 +58,6 @@ garden = Garden.new(
   size: 1000,
   capacity: 100,
   garden_type: "Garden",
-  featured: true,
   start_time: 8,
   duration: 8,
   availability: true,
