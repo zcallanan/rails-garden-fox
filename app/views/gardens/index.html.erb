@@ -7,6 +7,9 @@
         <% end %>
       <% end %>
     <% end  %>
+    <div class="pagination">
+      <%= paginate @gardens, theme: 'twitter-bootstrap-4' %>
+    </div>
   </div>
   <div class="col-5">
     <div id="map"
