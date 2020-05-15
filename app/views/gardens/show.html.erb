@@ -1,17 +1,16 @@
 
-<div>
+<div class="background-img">
   <% if @garden.photo.attached? %>
     <%= cl_image_tag @garden.photo.key, crop: :fill, class:"show-banner" %>
   <% end %>
-</div>
 
-<div class="container">
+<div id="show-scroll" class="container">
   <div class="row">
-    <div class="col-8 shadow p-3 mb-5 bg-white rounded p-5">
+    <div class="col-8 shadow p-4 mb-5 bg-white rounded p-8">
       <h1><strong> <%= @garden.name %> <%= @garden.address %> </strong></h1>
         <div class="col p-0 border-bottom">
-          <p> <%= @garden.size %> <strong>m<sup>2</sup></strong>  <%= @garden.capacity %>
-            <strong>capacity</strong> <%= @garden.garden_type %> <strong>type</strong> </p>
+          <p> <%= @garden.garden_type %> with <strong><%= @garden.size %> </strong>m<sup>2</sup>
+            and <strong><%= @garden.capacity %> </strong> capacity </p>
         </div>
 
         <div class="col p-0 pt-3">
@@ -23,7 +22,7 @@
             <p> <%= @garden.description %> </p>
       </div>
 
-      <div class="col p-0">
+      <div class="col p-0 pb-4">
           <h2>House rules</h2>
             <p> <%= @garden.house_rules %> </p>
       </div>
@@ -37,7 +36,7 @@
       </div>
     </div>
 
-    <div class="col-4 shadow p-3 mb-5 bg-white rounded p-5">
+    <div class="col-4 shadow p-4 mb-5 bg-white rounded p-8">
       <div class="assessment mb-3">
         <h4><strong>Select your garden time</strong></h4>
       </div>
@@ -45,4 +44,7 @@
     </div>
   </div>
 </div>
+</div>
+
+
 
