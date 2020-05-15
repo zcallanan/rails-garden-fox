@@ -91,10 +91,10 @@ garden.save
 
 garden = Garden.new(
   name: "Luxury garden",
-  description: "The is good for a perfect time with famaly and friends in the center of Grünwald, Germany.",
+  description: "The is good for a perfect time with family and friends in the center of Grünwald, Germany.",
   address: "Portenlängerstraße 3, 82031 Grünwald",
   price: 600,
-  house_rules: "Private garden, partys are not welcome",
+  house_rules: "Private garden, partys not welcome",
   filter_categories: "Green Pool Fountain Flowers Trees Lawn Temple",
   size: 300,
   capacity: 500,
@@ -145,7 +145,7 @@ garden.save
 
 garden = Garden.new(
   name: "BBQ garden",
-  description: "Perfect for famaly and friends with good food.",
+  description: "Perfect for family and friends with good food.",
   address: "Schönfeldstraße 6, 80539 München",
   price: 180,
   house_rules: "Private garden, loud music is not allowed.",
@@ -326,7 +326,7 @@ garden = Garden.new(
   description: "Good place to have a drink",
   address: "Oberanger 18, 80331 München",
   price: 255,
-  house_rules: "Puplic garden for a good time",
+  house_rules: "Puplic garden for a perfect day",
   filter_categories: "Party",
   size: 200,
   start_time: 11,
