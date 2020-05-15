@@ -295,7 +295,7 @@ garden = Garden.new(
   description: "The perfect place to have fun",
   address: "Am Einlaß 12, 80469 München",
   price: 135,
-  house_rules: "Puplic garden for a good time",
+  house_rules: "Public garden for a good time",
   filter_categories: "Party",
   size: 400,
   start_time: 7,
