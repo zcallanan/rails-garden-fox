@@ -60,4 +60,6 @@ application.load(definitionsFromContext(context))
 // Manually register Flatpickr as a stimulus controller
 application.register('flatpickr', Flatpickr)
 
+import { bookingBtn } from '../components/booking_request'
 
+bookingBtn();

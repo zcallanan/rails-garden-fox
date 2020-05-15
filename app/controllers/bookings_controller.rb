@@ -14,8 +14,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.garden = @garden
     @booking.user = current_user
-    rent_time = (end_date - start_date)/(600000 * 60 * 24)
-    @booking.price = @garden.price * rent_time
 
     if @booking.save
       redirect_to garden_booking_path(@booking)
@@ -47,7 +45,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(params[:start_date, :end_date])
+    params.require(:booking).permit(params[:garden_id])
   end
 
   def set_garden

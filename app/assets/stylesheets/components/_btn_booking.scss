@@ -1,0 +1,16 @@
+.booking-request {
+  display: none;
+}
+
+.booking-request.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.show-price {
+  display: flex;
+  justify-content: space-between;
+}

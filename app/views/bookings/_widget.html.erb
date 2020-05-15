@@ -1,9 +1,19 @@
 <div data-controller="booking" data-booking-price="<%= garden.price %>" data-booking-duration="<%= garden.duration %>">
   <%= render "form", booking: booking, garden: garden %>
 
-   <div class="mt-3">
-      €<%= garden.price %> x <span data-target="booking.days"></span>Days =
-    €<span data-target="booking.priceTotal">0</span>
+   <div class="mt-3 booking-request">
+    <p>You made a booking request...</p>
+    <p>You will soon receive a message from the owner.</p>
+    <hr>
+      <div class="show-price">
+        <div>
+          <strong>Price:</strong>
+        </div> 
+        <div>
+          <% garden.price %> <span class="hide" data-target="booking.days"></span>
+          <strong><span data-target="booking.priceTotal">0</span>€</strong>
+        </div>
+      </div>
   </div>
 
 </div>
