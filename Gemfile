@@ -40,6 +40,10 @@ gem 'geocoder'
 # image upload
 gem 'cloudinary', '~> 1.12.0'
 
+# pagination
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
