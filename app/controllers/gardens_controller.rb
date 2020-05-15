@@ -5,6 +5,13 @@ class GardensController < ApplicationController
   def index
 
     @gardens = policy_scope(garden_search.geocoded).order(updated_at: :desc)
+
+    params[:page] = nil if @gardens.page(params[:page])
+                                .per(5).out_of_range?
+
+
+    @gardens = @gardens.page(params[:page]).per(5)
+
     @min_price, @max_price = @gardens.map(&:price).minmax
     @size_options = [
       ['Small', '50_200'],
