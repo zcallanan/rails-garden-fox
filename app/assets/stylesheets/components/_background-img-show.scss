@@ -1,0 +1,11 @@
+.background-img {
+  width: 100%;
+  position: relative;
+}
+
+#show-scroll {
+  overflow:scroll;
+  position: absolute;
+  bottom: -380px;
+  transform: translateX(15%);
+}
