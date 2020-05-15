@@ -10,7 +10,7 @@
   background-color: #F1F8F7;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
-  height: 525px;
+  height: 500px;
 }
 
 .card-title {
@@ -38,8 +38,14 @@
   justify-content: space-between;
 }
 
+.card-body {
+  position: relative;
+}
+
 .availability {
   margin-top: 16px;
+  position: absolute;
+  bottom: 0;
 }
 
 // Testimonials
@@ -62,20 +68,21 @@
 }
 
 .testimonials {
-  display: flex;
   background: white;
 }
 
 .testimonial {
   background: white;
   margin: 24px;
+  position: relative;
+  height: 250px;
 }
 .testimonial h5 {
   margin-bottom: 0px;
 }
 
 .fa-user-circle {
-  font-size: 45px;
+  font-size: 35px;
   color: rgb(77, 77, 77);
   margin-right: 12px;
 }
@@ -83,6 +90,9 @@
 .test-user {
   display: flex;
   align-items: center;
-  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
 

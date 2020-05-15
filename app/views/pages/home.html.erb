@@ -13,26 +13,27 @@
       <% @gardens.each do |garden| %>
         <% if garden.featured == true %>
           <div class="col-12 col-md-6 col-lg-3">
-            <div class="card" style="width: 33vb;">
-              <% if garden.photo.attached? %>
-              <%= cl_image_tag garden.photo.key, crop: :fill, class: "card-img-top", alt: "Card image cap" %>
-              <% end %>
-              <div class="card-body">
-                <div class="rating">
-                  <h5 class="card-title"><%= garden.name %></h5>
-                  <div class="stars">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+            <%= link_to garden_path(garden), class: "garden-link" do %>
+              <div class="card" style="width: 33vb;">
+                <% if garden.photo.attached? %>
+                <%= cl_image_tag garden.photo.key, crop: :fill, class: "card-img-top", alt: "Card image cap" %>
+                <% end %>
+                <div class="card-body">
+                  <div class="rating">
+                    <h5 class="card-title"><%= garden.name %></h5>
+                    <div class="stars">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                    </div>
                   </div>
+                  <p class="card-text"><%= garden.description %></p>
+                  <p class="availability"> <strong>Available from:</strong> <%= garden.start_time %>:00 to <%= garden.start_time + garden.duration %>:00 </p>
                 </div>
-                <p class="card-text"><%= garden.description %></p>
-                <%= link_to 'Show Garden', garden_path(garden), class: 'btn btn-success'%>
-                <p class="availability"> <strong>Available from:</strong> <%= garden.start_time %>:00 to <%= garden.start_time + garden.duration %>:00 </p>
               </div>
-            </div>
+            <% end %>
           </div>
         <% end %>
       <% end %>
@@ -43,8 +44,8 @@
 <div class="wrapper">
   <h1>What people say</h1>
   <hr>
-  <div class="testimonials">
-    <div class="testimonial">
+  <div class=" row justify-content-center testimonials">
+    <div class="col-12 col-md-6 col-lg-3 testimonial">
       <p><strong>"</strong>A place I will not forget! We enjoyed Mocktails
         and breathtaking views! It has a great atmosphere, the staff is very
         attentive and friendly, I would highly recommend, it's one of the best
@@ -56,7 +57,7 @@
         <h5><strong>Anna F.</strong></h5>
       </div>
     </div>
-    <div class="testimonial">
+    <div class="col-12 col-md-6 col-lg-3 testimonial">
       <p><strong>"</strong>One of the world's great botanic gardens.Get there as
         early as you can to avoid the mid-day heat.<strong>"</strong>
      </p>
@@ -65,7 +66,7 @@
         <h5><strong>Danny G.</strong></h5>
       </div>
     </div>
-    <div class="testimonial">
+    <div class="col-12 col-md-6 col-lg-3 testimonial">
       <p><strong>"</strong>Really like this place to relax and buying time to see
         some of the most beautiful unique orchids and gardens.<strong>"</strong>
       </p>
@@ -77,8 +78,11 @@
   </div>
 </div>
 <div class="footer">
-    <h2><i class="fab fa-facebook-square"></i></h2>
-    <h2><i class="fab fa-instagram"></i></h2>
-    <h2><i class="fas fa-envelope-square"></i></h2>
-    <p><i class="far fa-copyright"></i> by DATE FOX </p>
-</div>
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fas fa-envelope-square"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <i class="far fa-copyright"></i> by DATE FOX
+  </div>
