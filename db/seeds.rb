@@ -91,13 +91,13 @@ garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 garden.save
 
 garden = Garden.new(
-  name: "Hoffgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 3, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
+  name: "Luxury garden",
+  description: "The is good for a perfect time with famaly and friends in the center of Grünwald, Germany.",
+  address: "Portenlängerstraße 3, 82031 Grünwald",
+  price: 100,
+  house_rules: "Private garden, partys are not welcome",
+  filter_categories: "Green Pool Fountain Flowers Trees Lawn Temple",
+  size: 300,
   capacity: 500,
   start_time: 9,
   duration: 8,
@@ -106,7 +106,7 @@ garden = Garden.new(
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589479623/Bildschirmfoto_2020-05-14_um_20.03.46_yfrfzd.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
@@ -123,35 +123,36 @@ booking = Booking.new(
 booking.save
 
 garden = Garden.new(
-  name: "Holfgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 4, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
+  name: "Rooftop gold",
+  description: "Wonderful Rooftop in the center of Munich, Germany, located between Marienplatz and Sendlingertor.",
+  address: "Maximilianstraße 4, 80538 München",
+  price: 1500,
+  house_rules: "Public garden, will require barriers to make it private.",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  capacity: 500,
+  size: 300,
+  capacity: 100,
   start_time: 9,
-  duration: 9,
-  garden_type: "Garden",
+  duration: 8,
+  featured: true,
+  garden_type: "Rooftop",
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589479632/Bildschirmfoto_2020-05-14_um_19.58.14_whwaat.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
 garden = Garden.new(
-  name: "Hotgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 5, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  capacity: 500,
+  name: "BBQ garden",
+  description: "Perfect for famaly and friends with good food.",
+  address: "Schönfeldstraße 6, 80539 München",
+  price: 80,
+  house_rules: "Private garden, loud music is not allowed.",
+  filter_categories: "Green with a big BBQ setup",
+  size: 100,
+  capacity: 50,
   start_time: 10,
   duration: 7,
   featured: true,
@@ -159,28 +160,28 @@ garden = Garden.new(
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589475260/Bildschirmfoto_2020-05-14_um_18.48.09_s8vuql.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
 garden = Garden.new(
-  name: "Hoflgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 6, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  capacity: 500,
+  name: "Rooftop Berlin",
+  description: "The best view in over Berlin in private atmosfaere.",
+  address: "Alte Jakobstraße 8, 10969 Berlin",
+  price: 30,
+  house_rules: "Do wath you wan't, but with love.",
+  filter_categories: "Couchset",
+  size: 100,
+  capacity: 100,
   start_time: 8,
   duration: 6,
-  garden_type: "Garden",
+  garden_type: "Rooftop",
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589479622/Bildschirmfoto_2020-05-14_um_19.59.24_q2vshu.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
@@ -197,21 +198,21 @@ booking = Booking.new(
 booking.save
 
 garden = Garden.new(
-  name: "Hoftgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 7, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees River",
-  size: 3000,
-  capacity: 150,
+  name: "Rooftop farm",
+  description: "Fresh food from the roof.",
+  address: "Hofgraben 10, 80539 München",
+  price: 25,
+  house_rules: "Private garden for urban farmers only.",
+  filter_categories: "Farm",
+  size: 500,
+  capacity: 100,
   start_time: 9,
   duration: 10,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589475287/Bildschirmfoto_2020-05-14_um_18.23.26_m0wamz.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
@@ -229,42 +230,95 @@ booking.save
 
 
 garden = Garden.new(
-  name: "Hofsgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 9, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
+  name: "Garden dream",
+  description: "The beauty in green is a peradise in green",
+  address: "Ledererstraße 15, 80331 München",
+  price: 250,
+  house_rules: "Private garden only for good people",
   filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  start_time: 9,
-  duration: 10,
-  capacity: 500,
+  size: 1500,
+  capacity: 80,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589479673/Bildschirmfoto_2020-05-14_um_18.48.43_rc3fwd.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
 garden.save
 
 garden = Garden.new(
-  name: "Hofalgarten",
-  description: "The Hofgarten is a garden in the center of Munich, Germany, located between the Residenz and the Englischer Garten.",
-  address: "Hofgartenstraße 10, 80538 München",
-  price: 500,
-  house_rules: "Public garden, will require barriers to make it private",
-  filter_categories: "Fountain Flowers Trees Lawn Temple",
-  size: 4000,
-  capacity: 500,
-  start_time: 9,
-  duration: 6,
+  name: "Green garden",
+  description: "English green for the perfect Tea time.",
+  address: "Altenhofstraße 25, 80331 München",
+  price: 70,
+  house_rules: "Private garden for Tea lovers only",
+  filter_categories: "English green and Tea",
+  size: 320,
+  capacity: 150,
   garden_type: "Garden",
   availability: true,
   user_id: user.id
   )
-image = "https://www.bavaria.by/wp-content/uploads//2018/02/keyvisual-nr-1650-luftaufnahme-hofgarten-muenchen-foto_keyvisual-988-x-598px.jpg"
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589475249/Bildschirmfoto_2020-05-14_um_18.44.29_cpdkk4.png"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Wild garden",
+  description: "The perfect place to have fun",
+  address: "Am Einlaß 12, 80469 München",
+  price: 35,
+  house_rules: "Puplic garden for a good time",
+  filter_categories: "Party",
+  size: 400,
+  capacity: 250,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589475254/Bildschirmfoto_2020-05-14_um_18.49.23_ttumvf.png"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Cocktail garden",
+  description: "Good place to have a drink",
+  address: "Oberanger 18, 80331 München",
+  price: 55,
+  house_rules: "Puplic garden for a good time",
+  filter_categories: "Party",
+  size: 200,
+  capacity: 100,
+  garden_type: "Garden",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589454211/cocktail-drink-1189266_hmgij7.jpg"
+file = URI.open(image)
+garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
+
+garden.save
+
+garden = Garden.new(
+  name: "Klunkerkranich",
+  description: "In the heart of Kreuzberg",
+  address: "Karl-Marx-Straße 66, 12043 Berlin",
+  price: 15,
+  house_rules: "Puplic Rooftop",
+  filter_categories: "Pool",
+  size: 400,
+  capacity: 300,
+  garden_type: "Rooftop",
+  availability: true,
+  user_id: user.id
+  )
+image = "https://res.cloudinary.com/daf8fgekl/image/upload/v1589479688/Bildschirmfoto_2020-05-14_um_19.52.23_nqfg1e.png"
 file = URI.open(image)
 garden.photo.attach(io: file, filename: garden.name, content_type: 'image/jpg')
 
