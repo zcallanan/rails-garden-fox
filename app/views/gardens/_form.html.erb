@@ -11,6 +11,7 @@
         placeholder: 'From',
         input_html: {
           value: f.object.start_date || Time.zone.now,
+          class: "flatpickr",
           data: {
             controller: 'datepicker',
             datepicker_show_months: 1,
@@ -27,6 +28,7 @@
         disabled: false,
         input_html: {
           value: f.object.end_date,
+          class: "flatpickr",
           data: {
             controller: 'datepicker',
             datepicker_show_months: 1,

@@ -12,7 +12,8 @@
     <div class="search-element">
       <%= text_field_tag :start_date,
         params[:start_date],
-        class: "search-input",
+        class: "search-input flatpickr",
+        id: "start-date",
         placeholder: "From:"
       %>
     </div>
@@ -20,7 +21,8 @@
     <div class="search-element">
       <%= text_field_tag :end_date,
         params[:end_date],
-        class: "search-input",
+        class: "search-input flatpickr",
+        id: "end-date",
         placeholder: "To:"
       %>
     </div>
